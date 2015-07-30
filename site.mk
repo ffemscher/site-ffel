@@ -27,9 +27,16 @@ GLUON_SITE_PACKAGES := \
         haveged
 
 
-DEFAULT_GLUON_RELEASE := 0.7.2
+DEFAULT_GLUON_RELEASE := 0.7.1
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 
 GLUON_PRIORITY ?= 0
+GLUON_BRANCH ?= stable
+export GLUON_BRANCH
+
+GLUON_TARGET ?= ar71xx-generic
+export GLUON_TARGET
+
+GLUON_LANGS ?= en de
